@@ -4,7 +4,7 @@ import Barcode from "./barcode.js";
 let particles = [];
 
 function setup() {
-  createCanvas(width, height);
+  createCanvas(innerWidth, innerHeight);
 }
 window.setup = setup;
 
