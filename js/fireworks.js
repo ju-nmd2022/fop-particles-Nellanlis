@@ -6,8 +6,8 @@ export default class Firework extends Particle {
     this.x = this.x + (Math.random() * 100 - 10);
     this.y = this.y + (Math.random() * 100 - 10);
     this.velocity = 0.2 + Math.random();
-    this.life = 30;
-    this.maxLife = 40 + Math.floor(Math.random() * 80);
+    this.life = 20;
+    this.maxLife = 80 + Math.floor(Math.random() * 80);
   }
   update() {
     this.y = this.y - this.velocity;
