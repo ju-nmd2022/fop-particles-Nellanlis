@@ -1,4 +1,5 @@
-import Fire from "./fire.js";
+import Firework from "./fireworks.js";
+import Barcode from "./barcode.js";
 
 let particles = [];
 
@@ -21,10 +22,15 @@ function draw() {
 }
 window.draw = draw;
 
-function mouseClicked() {
+function mousePressed() {
   for (let i = 0; i < 100; i++) {
-    let particle = new Fire(mouseX, mouseY);
-    particles.push(particle);
+    if (mouseX < innerWidth / 2) {
+      let particle = new Firework(mouseX, mouseY);
+      particles.push(particle);
+    } else {
+      let particle = new Barcode(mouseX, mouseY);
+      particles.push(particle);
+    }
   }
 }
-window.mouseClicked = mouseClicked;
+window.mousePressed = mousePressed;

@@ -1,9 +1,9 @@
 import Particle from "./particle.js";
 
-export default class Fire extends Particle {
+export default class Barcode extends Particle {
   constructor(x, y) {
     super(x, y);
-    this.x = this.x + (Math.random() * 20 - 10);
+    this.x = this.x + (Math.random() * 200 - 10);
     this.velocity = 0.2 + Math.random();
     this.life = 0;
     this.maxLife = 60 + Math.floor(Math.random() * 60);
@@ -18,9 +18,10 @@ export default class Fire extends Particle {
   draw() {
     push();
     translate(this.x, this.y);
+    strokeWeight(1);
     noStroke();
-    fill(255, 255, 0, 20);
-    ellipse(0, 0, 6, 20);
+    fill(255, 255, 255, 40);
+    ellipse(0, 0, 5, 40);
     pop();
   }
 
